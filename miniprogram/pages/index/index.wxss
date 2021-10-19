@@ -3,7 +3,6 @@
 page {
   width: auto;
   margin: 20rpx;
-  /* background-color: #f6f6f6; */
   background-image: linear-gradient(to bottom right, #7a88ff, #7affaf);
 }
 

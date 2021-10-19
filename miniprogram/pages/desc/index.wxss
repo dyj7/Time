@@ -1,0 +1,7 @@
+.desc {
+  padding: 40rpx;
+  color: #00a6cc;
+  font-size: 40rpx;
+  text-align: center;
+  word-break: break-all;
+}

@@ -4,20 +4,20 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.4);
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .install_tip_detail {
   position: fixed;
-  background-color: white;
+  top: 60%;
   right: 0;
   bottom: 0;
   left: 0;
-  top: 60%;
-  border-radius: 40rpx 40rpx 0 0;
-  padding: 50rpx;
   z-index: 9;
+  padding: 50rpx;
+  background-color: #fff;
+  border-radius: 40rpx 40rpx 0 0;
 }
 
 .install_tip_detail_title {
@@ -27,31 +27,31 @@
 }
 
 .install_tip_detail_tip {
-  font-size: 25rpx;
-  color: rgba(0,0,0,0.4);
   margin-top: 20rpx;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 25rpx;
   text-align: center;
 }
 
 .install_tip_detail_shell {
-  margin: 70rpx 0;
   display: flex;
   justify-content: center;
+  margin: 70rpx 0;
 }
 
 .install_tip_detail_copy {
-  color: #546488;
   margin-left: 10rpx;
+  color: #546488;
 }
 
 .install_tip_detail_button {
-  color: #07C160;
-  font-weight: 500;
-  background-color: rgba(0,0,0,0.1);
   width: 60%;
-  text-align: center;
   height: 90rpx;
-  line-height: 90rpx;
-  border-radius: 10rpx;
   margin: 0 auto;
+  color: #07c160;
+  font-weight: 500;
+  line-height: 90rpx;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
 }

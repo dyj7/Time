@@ -1,0 +1,13 @@
+<navigation-bar title="哈哈哈" />
+<view class="wrapper">
+  <!-- <view class="title">{{ i18n.wantSpeak }}</view> -->
+  <textarea
+    class="inp"
+    type="text"
+    value="{{ value }}"
+    bindinput="onInput"
+    placeholder="{{ i18n.wantSpeak }}"
+  />
+  <view class="btn" bindtap="onSave">{{ i18n.btnDesc }}</view>
+  <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+</view>

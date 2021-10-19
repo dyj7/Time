@@ -1,0 +1,30 @@
+.wrapper {
+  padding: 30rpx;
+}
+
+page {
+  height: 100%;
+  font-size: 36rpx;
+  background-image: linear-gradient(to right , #7a88ff, #7affaf);
+}
+
+.title {
+  color: #f0f;
+}
+
+.inp {
+  padding: 20rpx;
+  color: #ccc;
+  border: 1px solid #1e8daf;
+}
+
+.btn {
+  width: 400rpx;
+  height: 80rpx;
+  margin: 40rpx auto;
+  color: #fff;
+  line-height: 80rpx;
+  text-align: center;
+  background-image: linear-gradient(90deg, #50c2dc 0%, #09afd1 100%);
+  border-radius: 20rpx;
+}

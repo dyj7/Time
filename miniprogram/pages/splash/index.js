@@ -1,5 +1,9 @@
 Page({
   data: {
+    nickName: '',
+    avatarUrl: '',
+    name:'',
+    password:'',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   onLoad: function() {
@@ -18,6 +22,10 @@ Page({
     })
   },
   bindGetUserInfo (e) {
-    console.log(e.detail.userInfo)
-  }
+    const { nickName, avatarUrl } = e.detail.userInfo;
+    this.setData(nickName,avatarUrl);
+  },
+  onLogin(){
+    console.log('onLogin')
+  },
 })

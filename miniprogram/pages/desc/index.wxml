@@ -1,1 +1,4 @@
-<view class="desc"> {{ i18n.desc }} </view>
+<page-meta>
+  <navigation-bar title="简介" front-color="#fff" background-color="#7a88ff" />
+</page-meta>
+<view class="desc">{{ i18n.desc }}</view>

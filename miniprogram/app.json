@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/splash/index",
     "pages/index/index",
     "pages/desc/index",
     "pages/speak/index"

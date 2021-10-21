@@ -6,8 +6,29 @@ Page({
       btnDesc: '说完了就点这里',
     },
   },
-  onSave() {
+  async onSave() {
+    const tmplId = 'p5-PifVAtb-g6nmmjEZMqUx052L-5mdYL9LXEmFSVD8';
+    const res = await wx.requestSubscribeMessage({
+      tmplIds: [tmplId]
+    })
+    console.log(res)
+    if(res[tmplId] === 'accept'){
+      this.sendMessage()
+    }else{
+      await wx.showToast({
+        title: '你将收不到消息提示',
+      })
+      this.sendMessage();
+    }
+  },
+  sendMessage(){
     const { value } = this.data;
+    if(!value){
+      wx.showToast({
+        title: '说点东西吧',
+      })
+      return;
+    }
     const db = wx.cloud.database();
     db.collection('talks').add({
       data: {
@@ -33,14 +54,5 @@ Page({
     this.setData({ value });
   },
   onLoad: function (options) {
-    wx.setNavigationBarTitle({ title: '想说啥' })
   },
-
-  onReady: function () {},
-
-  onShow: function () {},
-
-  onHide: function () {},
-
-  onUnload: function () {},
 });

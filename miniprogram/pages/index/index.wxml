@@ -1,3 +1,10 @@
+<page-meta>
+  <navigation-bar
+    title="王娇专属"
+    front-color="#fff"
+    background-color="#7a88ff"
+  />
+</page-meta>
 <view>
   <view class="talks-wrapper">
     <view class="talk" wx:for="{{ talks }}" wx:key="_id">

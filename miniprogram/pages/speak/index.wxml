@@ -1,4 +1,10 @@
-<navigation-bar title="哈哈哈" />
+<page-meta>
+  <navigation-bar
+    title="说点啥"
+    front-color="#fff"
+    background-color="#7a88ff"
+  />
+</page-meta>
 <view class="wrapper">
   <!-- <view class="title">{{ i18n.wantSpeak }}</view> -->
   <textarea

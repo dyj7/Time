@@ -3,14 +3,25 @@ page {
   margin: 20rpx;
   background-image: linear-gradient(to bottom right, #7a88ff, #7affaf);
 }
-
 .content {
   margin: 20rpx;
   padding: 20rpx;
   color: #3b30a1;
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
-
+.content .top {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.content .top image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.content .top .name {
+  line-height: 100rpx;
+  margin-left: 30rpx;
+}
 .time {
   color: #0ff;
 }

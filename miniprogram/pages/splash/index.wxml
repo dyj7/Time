@@ -2,25 +2,25 @@
   <navigation-bar title="登录" front-color="#fff" background-color="#7a88ff" />
 </page-meta>
 <view class="wrapper">
-  <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
   <view class="info">
     <open-data class="avatar" type="userAvatarUrl"></open-data>
     <open-data class="nick-name" type="userNickName"></open-data>
   </view>
   <view class="name">
     <label>请输入账号：</label>
-    <input type="text" placeholder="你的手机号" value="{{ name }}" />
+    <input type="text" placeholder="你的手机号" value="{{ name }}" data-type="name" bindinput="onChangeInput" />
   </view>
   <view class="password">
     <label>请输入密码：</label>
-    <input type="text" placeholder="你的完整阴历生日" value="{{ password }}" />
+    <input
+      password="true"
+      placeholder="你的完整阴历生日"
+      value="{{ password }}"
+      data-type="pwd"
+      bindinput="onChangeInput"
+    />
   </view>
-  <button
-    bindtap="onLogin"
-    wx:if="{{ canIUse }}"
-    open-type="getUserInfo"
-    bindgetuserinfo="bindGetUserInfo"
-  >
+  <button bindtap="onLogin">
     登录
   </button>
 </view>

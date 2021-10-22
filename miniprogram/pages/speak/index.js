@@ -1,6 +1,8 @@
 Page({
   data: {
     value: '',
+    nickName: '',
+    avatarUrl: '',
     i18n: {
       wantSpeak: '你有什么想说的试试能不能在这里说',
       btnDesc: '说完了就点这里',
@@ -11,7 +13,6 @@ Page({
     const res = await wx.requestSubscribeMessage({
       tmplIds: [tmplId]
     })
-    console.log(res)
     if(res[tmplId] === 'accept'){
       this.sendMessage()
     }else{
@@ -20,6 +21,7 @@ Page({
       })
       this.sendMessage();
     }
+    this.sendMessage();
   },
   sendMessage(){
     const { value } = this.data;
@@ -29,11 +31,14 @@ Page({
       })
       return;
     }
+    const { nickName, avatarUrl } = this.data;
     const db = wx.cloud.database();
     db.collection('talks').add({
       data: {
         time: new Date().toString(),
         desc: value,
+        nickName,
+        avatarUrl
       },
       success: function (res) {
         console.log(res);
@@ -53,6 +58,9 @@ Page({
     const { value } = e.detail;
     this.setData({ value });
   },
-  onLoad: function (options) {
+  async onLoad (options) {
+    const nickName = await wx.getStorageSync('nickName');
+    const avatarUrl = await wx.getStorageSync('avatarUrl');
+    this.setData({ nickName, avatarUrl })
   },
 });
